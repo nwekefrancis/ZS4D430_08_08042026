@@ -1,0 +1,7 @@
+@EndUserText.label: 'Access Control Customers'
+@MappingRole: true
+define role Z08CUSTOMERS_R_AC {
+    grant
+        select on Z08CUSTOMERS_R
+          where Postcode  = '10115';                   
+}

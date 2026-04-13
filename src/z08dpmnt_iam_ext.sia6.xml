@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>Z08DPMNT_IAM_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>IAM App for Department  EX. 17</DESCRIPTION>
+     <RESPONSIBLE>CB9980000029</RESPONSIBLE>
+     <MASTER_LANGUAGE>DE</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>A32</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZS4D430_08</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>Z08DPMNT_IAM_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>Z08DPMENT</AUTH_OBJECT>
+      <STATUS>U</STATUS>
+      <TEXT>Berichtigung pro Abteilung (Berechtigung for Ex. 17)</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>rusLBpxKH9GN45Y3D6M3IA==</UUID>
+        <AUTH_OBJECT>Z08DPMENT</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <TEXT>Berichtigung pro Abteilung (Berechtigung for Ex. 17)</TEXT>
+        <STATUS>U</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>Z08DPMNT</FIELD>
+          <VALUE>ADMIN</VALUE>
+          <VALUES>
+           <item>
+            <UUID>rusLBpxKH9GN45Y3D6NXIA==</UUID>
+            <LOW_VALUE>ADMIN</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Abzeilung</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUE>Anzeigen</VALUE>
+          <VALUES>
+           <item>
+            <UUID>rusLBpxKH9GN45Y3D6N3IA==</UUID>
+            <LOW_VALUE>03</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Aktivität</TEXT>
+          <STATUS>U</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>
