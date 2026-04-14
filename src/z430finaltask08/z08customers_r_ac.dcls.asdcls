@@ -6,6 +6,6 @@ define role Z08CUSTOMERS_R_AC {
             on
                 Z08CUSTOMERS_R
                     where
-                        (Postcode) = aspect pfcg_auth(Z08PSTCD, Z08PSTCD, ACTVT = '3');
+                        (Postcode) = aspect pfcg_auth(Z08PSTCD, Z08PSTCD, ACTVT = '03');
                         
 }
