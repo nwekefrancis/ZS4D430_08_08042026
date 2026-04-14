@@ -3,9 +3,11 @@
 //@AbapCatalog.viewEnhancementCategory: [#NONE]
 
 @AbapCatalog: { dataMaintenance: #RESTRICTED, 
-                viewEnhancementCategory: [ #NONE ] }
-
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+                viewEnhancementCategory: [ #PROJECTION_LIST ],
+                extensibility.dataSources: [ 'Employee' ],
+                extensibility.elementSuffix: 'ZEM' }
+                
+@AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Mitarbeiter (Entity)'
 @Metadata.ignorePropagatedAnnotations: true
 
@@ -13,12 +15,11 @@
                           serviceQuality: #D,
                           sizeCategory: #M }
 
-                          
-
-
-define view entity Z08_R_Employee as select from z08employ
-    association [1..1] to Z08_R_DEPARTMENT as _Department
-        on $projection.DepartmentId = _Department.Id
+ 
+define view entity Z08_R_Employee 
+    as select from z08employ as Employee
+        association [1..1] to Z08_R_DEPARTMENT as _Department
+            on $projection.DepartmentId = _Department.Id
 {
     key employee_id as EmployeeId,
     first_name as FirstName,

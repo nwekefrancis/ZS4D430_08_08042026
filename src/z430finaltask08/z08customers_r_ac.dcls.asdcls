@@ -1,7 +1,11 @@
-@EndUserText.label: 'Access Control Customers'
+@EndUserText.label: 'Access Control for Customers'
 @MappingRole: true
 define role Z08CUSTOMERS_R_AC {
-    grant
-        select on Z08CUSTOMERS_R
-          where Postcode  = '10115';                   
+    grant 
+        select
+            on
+                Z08CUSTOMERS_R
+                    where
+                        (Postcode) = aspect pfcg_auth(Z08PSTCD, Z08PSTCD, ACTVT = '3');
+                        
 }

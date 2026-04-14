@@ -1,12 +1,18 @@
-@AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AbapCatalog.viewEnhancementCategory: [#PROJECTION_LIST]
+@AbapCatalog.extensibility.dataSources: [ 'Employee' ]      // Ex. 19
+@AbapCatalog.extensibility.elementSuffix: 'ZEM'             // Ex. 19
+
+@AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Mitarbeiter (Projection) Ex. 15'
 @Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define view entity Z08_C_EmployeeQueryP
     with parameters 
         p_target_curr : /dmo/currency_code,   // EX. 15
+        
+        @Environment.systemField: #USER_DATE
         p_date : abap.dats                    // EX. 15
-  as select from Z08_R_Employee
+  as select from Z08_R_Employee as Employee     // Ex. 19 'aas Employee is added. 
 {
   key EmployeeId,
       FirstName,
@@ -24,7 +30,7 @@ define view entity Z08_C_EmployeeQueryP
 
 
 
-      @EndUserText.label: 'Employee Role'
+      
       case EmployeeId
         when _Department.DepartmentHead then 'H'
         when _Department.DepartmentAssistant then 'A'
@@ -39,7 +45,7 @@ define view entity Z08_C_EmployeeQueryP
 //      cast( 'USD' as /dmo/currency_code )                                      as CurrencyCodeUSD,
 
       @Semantics.amount.currencyCode: 'CurrencyCodeTarget'
-      @EndUserText.label: 'Annual Salary Coverted'
+      
       currency_conversion( amount => AnnualSalary,
                   source_currency => CurrencyCode,
                   target_currency => $parameters.p_target_curr,                 // EX. 15.  changed to §parameter...
@@ -47,7 +53,7 @@ define view entity Z08_C_EmployeeQueryP
       //      Ex. 14 Task 3 Ends -> End of Ex. 14
 
       @Semantics.amount.currencyCode: 'CurrencyCodeTarget'
-      @EndUserText.label: 'Monthly Syslary'
+      
       cast( cast( $projection.AnnualSalaryConverted as abap.fltp  )
            / 12.0 as abap.dec( 10, 2 )  )                                      as MonthlySalaryConverted,
       $parameters.p_target_curr as CurrencyCodeTarget,                          // EX. 15 

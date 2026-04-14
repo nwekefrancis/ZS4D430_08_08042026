@@ -10,7 +10,7 @@
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Postal Coden Data Element</DDTEXT>
+    <DDTEXT>Postal Code Data Element</DDTEXT>
     <REPTEXT>Postal Code</REPTEXT>
     <SCRTEXT_S>Postal</SCRTEXT_S>
     <SCRTEXT_M>Postal Code</SCRTEXT_M>
