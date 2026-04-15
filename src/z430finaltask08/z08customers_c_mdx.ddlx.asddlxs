@@ -1,0 +1,16 @@
+@Metadata.layer: #CORE
+annotate view Z08CUSTOMERS_C with
+{
+  @EndUserText.label: 'Customer Number'
+  CustomerID;
+  @EndUserText.label: 'First Name'
+  FirstName;
+  @EndUserText.label: 'Last Name'
+  LastName;
+  @EndUserText.label: 'City'
+  City;
+  @EndUserText.label: 'Street'
+  Street;
+  @EndUserText.label: 'PostCode'
+  Postcode;
+}

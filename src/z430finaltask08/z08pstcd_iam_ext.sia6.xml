@@ -32,18 +32,6 @@
         <STATUS>U</STATUS>
         <VALUES>
          <item>
-          <FIELD>Z08PSTCD</FIELD>
-          <VALUE>10115</VALUE>
-          <VALUES>
-           <item>
-            <UUID>rusLBpxKH9GN/qp+0lI3IA==</UUID>
-            <LOW_VALUE>10115</LOW_VALUE>
-           </item>
-          </VALUES>
-          <TEXT>Postal Code Data Element</TEXT>
-          <STATUS>U</STATUS>
-         </item>
-         <item>
           <FIELD>ACTVT</FIELD>
           <VALUE>Anzeigen</VALUE>
           <VALUES>
@@ -55,6 +43,18 @@
           <TEXT>Aktivität</TEXT>
           <STATUS>U</STATUS>
           <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>Z08PSTCD</FIELD>
+          <VALUE>10115</VALUE>
+          <VALUES>
+           <item>
+            <UUID>rusLBpxKH9GN/qp+0lI3IA==</UUID>
+            <LOW_VALUE>10115</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Postal Code Data Element</TEXT>
+          <STATUS>U</STATUS>
          </item>
         </VALUES>
        </item>

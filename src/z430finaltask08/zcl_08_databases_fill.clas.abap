@@ -64,6 +64,42 @@ CLASS zcl_08_databases_fill IMPLEMENTATION.
       zzphone_zcu   = '+49333333333'
     ) TO lt_customers.
 
+    APPEND VALUE z08customers(
+      client        = sy-mandt
+      customerid    = '000004'
+      first_name    = 'Li'
+      last_name     = 'Sun'
+      city          = 'Mülheim an der Ruhr'
+      street        = 'Duisburger Str. 471'
+      postcode      = '47522'
+      zzemail_zcu   = 'li.sun@example.com'
+      zzphone_zcu   = '+49154122515'
+    ) TO lt_customers.
+
+    APPEND VALUE z08customers(
+      client        = sy-mandt
+      customerid    = '000005'
+      first_name    = 'Peter'
+      last_name     = 'Polln'
+      city          = 'Köln'
+      street        = 'Ebersberger Str. 12'
+      postcode      = '75482'
+      zzemail_zcu   = 'peter.polln@example.com'
+      zzphone_zcu   = '+49158942222'
+    ) TO lt_customers.
+
+    APPEND VALUE z08customers(
+      client        = sy-mandt
+      customerid    = '000006'
+      first_name    = 'Mina'
+      last_name     = 'Chan'
+      city          = 'Munich'
+      street        = 'Ring 258'
+      postcode      = '80331'
+      zzemail_zcu   = 'mina.chan@example.com'
+      zzphone_zcu   = '+49164287153'
+    ) TO lt_customers.
+
     "------------------------------------------------------------
     " 4. Fill order table
     "------------------------------------------------------------
@@ -95,6 +131,38 @@ CLASS zcl_08_databases_fill IMPLEMENTATION.
       client      = sy-mandt
       orderid     = '000004'
       customerid  = '000003'
+      amount      = '50.00'
+      currency    = 'EUR'
+    ) TO lt_orders.
+
+    APPEND VALUE z08cust_orders(
+      client      = sy-mandt
+      orderid     = '000005'
+      customerid  = '000004'
+      amount      = '120.50'
+      currency    = 'EUR'
+    ) TO lt_orders.
+
+    APPEND VALUE z08cust_orders(
+      client      = sy-mandt
+      orderid     = '000006'
+      customerid  = '000004'
+      amount      = '79.50'
+      currency    = 'EUR'
+    ) TO lt_orders.
+
+    APPEND VALUE z08cust_orders(
+      client      = sy-mandt
+      orderid     = '000007'
+      customerid  = '000005'
+      amount      = '200.00'
+      currency    = 'EUR'
+    ) TO lt_orders.
+
+    APPEND VALUE z08cust_orders(
+      client      = sy-mandt
+      orderid     = '000008'
+      customerid  = '000006'
       amount      = '50.00'
       currency    = 'EUR'
     ) TO lt_orders.

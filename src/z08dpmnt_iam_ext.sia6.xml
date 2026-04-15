@@ -32,18 +32,6 @@
         <STATUS>U</STATUS>
         <VALUES>
          <item>
-          <FIELD>Z08DPMNT</FIELD>
-          <VALUE>ADMIN</VALUE>
-          <VALUES>
-           <item>
-            <UUID>rusLBpxKH9GN45Y3D6NXIA==</UUID>
-            <LOW_VALUE>ADMIN</LOW_VALUE>
-           </item>
-          </VALUES>
-          <TEXT>Abzeilung</TEXT>
-          <STATUS>U</STATUS>
-         </item>
-         <item>
           <FIELD>ACTVT</FIELD>
           <VALUE>Anzeigen</VALUE>
           <VALUES>
@@ -55,6 +43,18 @@
           <TEXT>Aktivität</TEXT>
           <STATUS>U</STATUS>
           <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>Z08DPMNT</FIELD>
+          <VALUE>ADMIN</VALUE>
+          <VALUES>
+           <item>
+            <UUID>rusLBpxKH9GN45Y3D6NXIA==</UUID>
+            <LOW_VALUE>ADMIN</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Abzeilung</TEXT>
+          <STATUS>U</STATUS>
          </item>
         </VALUES>
        </item>
